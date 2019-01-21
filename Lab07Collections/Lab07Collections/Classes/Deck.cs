@@ -14,7 +14,7 @@ namespace Lab07Collections.Classes
         /// used to add a single card to the deck
         /// </summary>
         /// <param name="card"></param>
-        public void Add(T card)
+        public bool Add(T card)
         {
             if(count == deck.Length)
             {
@@ -22,25 +22,48 @@ namespace Lab07Collections.Classes
                 Array.Resize(ref deck, deck.Length * 2);
             }
             deck[count++] = card;
+            return true;
         }
 
         /// <summary>
-        /// Used to remove a single card from the deck
+        /// To remove the card
         /// </summary>
         /// <param name="card"></param>
-        public void Remove(T card)
+        public bool Remove(T card)
         {
             for (int i = 0; i < count; i++)
             {
-                if(deck[i] != null && deck[i].Equals(card))
+                if (deck[i] != null && deck[i].Equals(card))
                 {
                     //deck.SetValue(null, i);
                     //break;
                     deck[i] = deck[--count];
+                    return true;
                 }
             }
+            return false;
         }
+        
+        //This was covered in class but ran out of time to implement changes to my code.
         /*
+        public void Remove(T item)
+        {
+            T[] temp = new T[(count - 1)];
+            int tempcount = 0;
+
+            foreach (T card in deck)
+            {
+                if(!card.Equals(item))
+                {
+                    temp[tempcount] = card;
+                    tempcount++;
+                }
+            }
+            deck = temp;
+            count--;
+        }
+        
+
         public int Count()
         {
             return deck;

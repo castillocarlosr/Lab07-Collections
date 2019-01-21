@@ -19,14 +19,13 @@ You may look at the source code to ensure nothing evil is in there.
 * There will be a built deck using enum.
 * The console will display the deck in the dealer hand and player 2 hand.  
 * The console will display how many cards are left in the deck.
-* 
 * When the game is finished, the console will close.
 
-This assignment is still ongoing.  Will have to resubmit over weekend.
-
+## xUnit Testing
+* Three for Adding cards to deck.  
+* Three for Removing cards from deck.
 
 Below are screen shots of what this should look like.
-Currently a working progess.  Displays currectly but I need a shuffle method and a deal in equal parts method for the card game.
 ###Screen Shot 
 ![](assets/Capture.PNG?raw=true)
 
